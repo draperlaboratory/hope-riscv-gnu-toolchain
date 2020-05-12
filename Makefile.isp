@@ -44,5 +44,6 @@ $(BUILD_DIR)/Makefile:
 install:
 	$(MAKE) -C $(BUILD_DIR) install
 
+clean: BUILD_DIR ?= build-multilib
 clean:
 	$(RM) -r $(BUILD_DIR)
