@@ -25,6 +25,8 @@ multilib: CONFIG_FLAGS =  --prefix=$(ISP_PREFIX) --enable-multilib --with-cmodel
 
 install: BUILD_DIR ?= build-multilib
 
+clean: BUILD_DIR ?= build-multilib
+
 rv32: $(BUILD_DIR)/Makefile
 	$(MAKE) -C $(BUILD_DIR)
 
