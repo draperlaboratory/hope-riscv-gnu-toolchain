@@ -12,6 +12,11 @@ MULTILIBS_GEN := \
     rv64imafd-lp64d-- \
     rv64imac-lp64--
 
+LINUX_MULTILIBS_GEN := \
+    rv32imafdc-ilp32d-- \
+    rv64imafdc-lp64d-- \
+    rv64imac-lp64--
+
 all: multilib
 
 rv32: BUILD_DIR ?= build32
@@ -40,6 +45,9 @@ multilib: $(BUILD_DIR)/Makefile
 	cd riscv-gcc/gcc/config/riscv; \
         mv t-elf-multilib t-elf-multilib.old; \
         ./multilib-generator $(MULTILIBS_GEN) > t-elf-multilib
+	cd riscv-gcc/gcc/config/riscv; \
+		  mv t-linux-multilib t-linux-multilib.old; \
+		  ./multilib-generator $(LINUX_MULTILIBS_GEN) > t-linux-multilib
 	$(MAKE) -C $(BUILD_DIR)
 
 rv64linux: $(BUILD_DIR)/Makefile
