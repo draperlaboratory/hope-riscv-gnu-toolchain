@@ -20,6 +20,9 @@ rv32: CONFIG_FLAGS = --prefix=$(ISP_PREFIX) --with-arch=rv32ima --with-abi=ilp32
 rv64: BUILD_DIR ?= build64
 rv64: CONFIG_FLAGS = --prefix=$(ISP_PREFIX) --with-arch=rv64imafd --with-abi=lp64d --with-cmodel=medany
 
+rv64linux: BUILD_DIR ?= build64linux
+rv64linux:CONFIG_FLAGS = --prefix=$(ISP_PREFIX) --enable-linux --with-arch=rv64imafd --with-abi=lp64d --with-cmodel=medany
+
 multilib: BUILD_DIR ?= build-multilib
 multilib: CONFIG_FLAGS =  --prefix=$(ISP_PREFIX) --enable-multilib --with-cmodel=medany
 
@@ -38,6 +41,9 @@ multilib: $(BUILD_DIR)/Makefile
         mv t-elf-multilib t-elf-multilib.old; \
         ./multilib-generator $(MULTILIBS_GEN) > t-elf-multilib
 	$(MAKE) -C $(BUILD_DIR)
+
+rv64linux: $(BUILD_DIR)/Makefile
+	$(MAKE) -C $(BUILD_DIR) linux
 
 $(BUILD_DIR)/Makefile:
 	mkdir -p $(BUILD_DIR)
