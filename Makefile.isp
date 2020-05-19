@@ -13,7 +13,7 @@ MULTILIBS_GEN := \
     rv64imac-lp64--
 
 LINUX_MULTILIBS_GEN := \
-    rv32imafd-ilp32d-- \
+    rv32ima-ilp32-- \
     rv64imafd-lp64d-- \
     rv64imac-lp64--
 

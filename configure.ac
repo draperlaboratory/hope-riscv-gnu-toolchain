@@ -99,7 +99,7 @@ AS_IF([test "x$enable_multilib" != xno],
 	[AC_SUBST(multilib_flags,--disable-multilib)])
 
 AS_IF([test "x$enable_multilib" != xno],
-        [AC_SUBST(glibc_multilib_names,"rv32ima-ilp32 rv32imafd-ilp32d rv64ima-lp64 rv64imafd-lp64d")],
+        [AC_SUBST(glibc_multilib_names,"rv32ima-ilp32 rv64ima-lp64 rv64imafd-lp64d")],
         [AC_SUBST(glibc_multilib_names,"$with_arch-$with_abi")])
 
 AS_IF([test "x$enable_multilib" != xno],
