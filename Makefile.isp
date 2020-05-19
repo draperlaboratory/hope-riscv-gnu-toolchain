@@ -48,7 +48,7 @@ multilib: $(BUILD_DIR)/Makefile
 	cd riscv-gcc/gcc/config/riscv; \
 		  mv t-linux-multilib t-linux-multilib.old; \
 		  ./multilib-generator $(LINUX_MULTILIBS_GEN) > t-linux-multilib
-	$(MAKE) -C $(BUILD_DIR)
+	$(MAKE) -C $(BUILD_DIR) newlib linux
 
 rv64linux: $(BUILD_DIR)/Makefile
 	$(MAKE) -C $(BUILD_DIR) linux
