@@ -12,7 +12,9 @@ MULTILIBS_GEN := \
     rv64imafd-lp64d-- \
     rv64imac-lp64--
 
-all: multilib
+all:
+	$(MAKE) -f Makefile.isp multilib
+	$(MAKE) -f Makefile.isp rv64linux
 
 rv32: BUILD_DIR ?= build32
 rv32: CONFIG_FLAGS = --prefix=$(ISP_PREFIX) --with-arch=rv32ima --with-abi=ilp32 --with-cmodel=medlow
