@@ -1,28 +1,33 @@
 [submodule "riscv-binutils"]
 	path = riscv-binutils
-	url = https://github.com/riscv-collab/riscv-binutils-gdb.git
+	url = ../hope-riscv-binutils-gdb.git
 	branch = riscv-binutils-2.37
 [submodule "riscv-gcc"]
 	path = riscv-gcc
-	url = https://github.com/riscv-collab/riscv-gcc.git
+	url = ../hope-riscv-gcc.git
 	branch = riscv-gcc-11.1.0
 [submodule "riscv-glibc"]
 	path = riscv-glibc
-	url = git://sourceware.org/git/glibc.git
+	url = https://sourceware.org/git/glibc.git
 	branch = 7aad1253
-[submodule "riscv-dejagnu"]
-	path = riscv-dejagnu
-	url = https://github.com/riscv-collab/riscv-dejagnu.git
-	branch = upstream-2021.12.22
+
+# hope tools do not clone this submodule, but upstreams do
+#[submodule "riscv-dejagnu"]
+#	path = riscv-dejagnu
+#	url = https://github.com/riscv-collab/riscv-dejagnu.git
+#	branch = upstream-2021.12.22
+
 [submodule "riscv-newlib"]
 	path = riscv-newlib
-	url = git://sourceware.org/git/newlib-cygwin.git
+	url = ../hope-riscv-newlib.git
 	branch = newlib-4.1.0
 [submodule "riscv-gdb"]
 	path = riscv-gdb
-	url = https://github.com/riscv-collab/riscv-binutils-gdb.git
+	url = ../hope-riscv-binutils-gdb.git
 	branch = fsf-gdb-10.1-with-sim
-[submodule "qemu"]
-	path = qemu
-	url = https://git.qemu.org/git/qemu.git
-	branch = upstream-2021.12.22
+
+# hope tools do	not clone this submodule, but upstreams	do
+#[submodule "qemu"]
+#	path = qemu
+#	url = https://git.qemu.org/git/qemu.git
+#	branch = upstream-2021.12.22
