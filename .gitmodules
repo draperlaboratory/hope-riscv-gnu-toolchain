@@ -9,7 +9,7 @@
 [submodule "riscv-glibc"]
 	path = riscv-glibc
 	url = https://sourceware.org/git/glibc.git
-	branch = 7aad1253
+	branch = 9826b03
 
 # hope tools do not clone this submodule, but upstreams do
 #[submodule "riscv-dejagnu"]
