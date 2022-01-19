@@ -9,7 +9,7 @@
 [submodule "riscv-glibc"]
 	path = riscv-glibc
 	url = git://sourceware.org/git/glibc.git
-	tag = glibc-2.33
+	branch = 7aad1253
 [submodule "riscv-dejagnu"]
 	path = riscv-dejagnu
 	url = https://github.com/riscv-collab/riscv-dejagnu.git
