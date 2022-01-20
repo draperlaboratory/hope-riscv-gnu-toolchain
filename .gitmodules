@@ -10,13 +10,11 @@
 	path = riscv-glibc
 	url = https://sourceware.org/git/glibc.git
 	branch = 9826b03
-
 # hope tools do not clone this submodule, but upstreams do
 #[submodule "riscv-dejagnu"]
 #	path = riscv-dejagnu
 #	url = https://github.com/riscv-collab/riscv-dejagnu.git
 #	branch = upstream-2021.12.22
-
 [submodule "riscv-newlib"]
 	path = riscv-newlib
 	url = ../hope-riscv-newlib.git
@@ -25,7 +23,6 @@
 	path = riscv-gdb
 	url = ../hope-riscv-binutils-gdb.git
 	branch = fsf-gdb-10.1-with-sim
-
 # hope tools do	not clone this submodule, but upstreams	do
 #[submodule "qemu"]
 #	path = qemu
